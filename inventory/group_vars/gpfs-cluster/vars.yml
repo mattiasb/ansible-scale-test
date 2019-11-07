@@ -1,0 +1,19 @@
+---
+scale_version: 5.0.3.3
+scale_install_remotepkg_path: >-
+  /root/software/Spectrum_Scale_Advanced-5.0.3.3-x86_64-Linux-install
+
+scale_storage_filesystem_defaults:
+  blockSize: 4M
+  defaultMetadataReplicas: 2
+  defaultDataReplicas: 2
+  numNodes: 2
+  automaticMountOption: true
+  defaultMountPoint_prefix: /mnt/
+  overwriteNSDs: true
+
+scale_install_repository_url: >-
+  file:///usr/lpp/mmfs/{{ scale_version }}/gpfs_rpms/
+
+scale_install_zimon_repository_url: >-
+  file:///usr/lpp/mmfs/{{ scale_version }}/zimon_rpms/rhel7/

@@ -1,0 +1,18 @@
+---
+scale_storage:
+  - filesystem: gpfs01
+    disks:
+      - device: /dev/vdb
+        nsd: nsd3
+        servers: scale02
+        failureGroup: 2
+        usage: dataAndMetadata
+        pool: system
+      - device: /dev/vdc
+        nsd: nsd4
+        servers: scale02
+        failureGroup: 2
+        usage: dataOnly
+        pool: silver
+
+scale_cluster_manager: true

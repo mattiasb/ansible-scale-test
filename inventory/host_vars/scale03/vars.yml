@@ -1,0 +1,12 @@
+---
+scale_storage:
+  - filesystem: gpfs01
+    disks:
+      - device: /dev/vdb
+        nsd: nsd5
+        servers: scale03
+        failureGroup: 3
+        usage: descOnly
+        pool: system
+
+scale_cluster_manager: false

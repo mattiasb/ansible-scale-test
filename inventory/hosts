@@ -1,0 +1,7 @@
+[gpfs-cluster]
+scale01 ansible_host=10.0.50.160 ansible_user=root ansible_ssh_pass=Passw0rd
+scale02 ansible_host=10.0.50.161 ansible_user=root ansible_ssh_pass=Passw0rd
+scale03 ansible_host=10.0.50.162 ansible_user=root ansible_ssh_pass=Passw0rd
+
+[gpfs-cluster-gui]
+scale03 ansible_host=10.0.50.162 ansible_user=root ansible_ssh_pass=Passw0rd

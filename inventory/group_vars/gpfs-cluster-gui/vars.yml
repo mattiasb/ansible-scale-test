@@ -1,0 +1,11 @@
+---
+scale_gui_collector: true
+scale_gui_hide_tip_callhome: true
+
+scale_gui_admin_user: "admin"
+scale_gui_admin_password: Passw0rd
+scale_gui_admin_role: "SecurityAdmin,SystemAdmin"
+
+scale_gui_user_username: 'SEC'
+scale_gui_user_role: 'SystemAdmin'
+scale_gui_user_password: 'Passw0rd'

@@ -1,0 +1,28 @@
+---
+- name: Checking that hostname is set and follows RFC 1123
+  assert:
+    that:
+      - hostname is string
+      - hostname | length > 0
+      - hostname | length < 64
+      - hostname is match('[a-z0-9]([a-z0-9-]*[a-z0-9])?')
+    msg: >-
+      `hostname` either isn't set or doesn't follow RFC 1123.
+
+      Value:
+        hostname: {{ hostname | default('') }}
+
+- name: Set Service Facts
+  service_facts:
+
+- name: Set hostname
+  hostname:
+    name: "{{ hostname }}"
+  notify:
+    - restart_avahi
+
+- name: Configure /etc/hosts
+  lineinfile:
+    path: /etc/hosts
+    regexp: "^127.0.1.1"
+    line: "127.0.1.1	{{ hostname }}"

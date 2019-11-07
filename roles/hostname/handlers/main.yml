@@ -1,0 +1,7 @@
+---
+- name: "handlers : Restart Avahi"
+  service:
+    name: avahi-daemon
+    state: restarted
+  listen: restart_avahi
+  when: ('avahi-daemon.service' in services)

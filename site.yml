@@ -1,0 +1,9 @@
+---
+- hosts: gpfs-cluster
+  roles:
+    - hostname
+    - acch.spectrum_scale
+
+- hosts: gpfs-cluster-gui
+  roles:
+    - acch.spectrum_scale_gui
